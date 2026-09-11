@@ -13,7 +13,7 @@
                 <a href="#plans" class="hover:text-red transition-colors">Plans</a>
                 <a href="#services" class="hover:text-red transition-colors">Services</a>
                 <a href="#gallery" class="hover:text-red transition-colors">Gallery</a>
-                <a href="#contact" class="hover:text-red transition-colors">Contacts</a>
+                <a href="#contact" class="hover:text-red transition-colors">Contact</a>
             </div>
 
             <div class="hidden lg:flex items-center gap-3">

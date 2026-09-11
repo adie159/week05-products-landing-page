@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GT Fitness — Preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = { theme: { extend: {
+  colors: { ink:'#0D0F0C', surface:'#1A1D18', bone:'#E8E6DF', red:'#C81E1E', turf:'#2F9E44' },
+  fontFamily: { display:['Oswald','sans-serif'], body:['Inter','sans-serif'] }
+}}}
+</script>
+<style>html{scroll-behavior:smooth}::selection{background:#C81E1E;color:#E8E6DF}</style>
+</head>
+<body class="bg-ink text-bone font-body antialiased">
+
+<header class="sticky top-0 z-50 bg-ink/95 backdrop-blur border-b-2 border-surface">
+  <nav class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="flex items-center justify-between h-20">
+      <a href="#home" class="flex items-center gap-3 shrink-0">
+        <img src="images/gym_logo.jpg" class="h-11 w-11 object-cover rounded-sm">
+        <span class="font-display font-semibold text-xl tracking-wide">GT FITNESS</span>
+      </a>
+      <div class="hidden lg:flex items-center gap-8 font-display uppercase text-sm tracking-wide">
+        <a href="#home" class="hover:text-red">Home</a>
+        <a href="#about" class="hover:text-red">About</a>
+        <a href="#plans" class="hover:text-red">Plans</a>
+        <a href="#services" class="hover:text-red">Services</a>
+        <a href="#gallery" class="hover:text-red">Gallery</a>
+        <a href="#contact" class="hover:text-red">Contact</a>
+      </div>
+      <div class="hidden lg:flex items-center gap-3">
+        <a href="#" class="text-bone hover:text-turf border-b-2 border-transparent hover:border-turf font-display font-semibold uppercase text-sm px-2 py-3">Message Us</a>
+        <a href="#plans" class="bg-red text-bone hover:bg-red/85 font-display font-semibold uppercase text-sm px-7 py-3">Join Now</a>
+      </div>
+      <button id="menu-btn" class="lg:hidden text-bone" aria-label="Open menu" aria-expanded="false">
+        <svg id="icon-open" xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+        <svg id="icon-close" xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+    <div id="mobile-menu" class="hidden lg:hidden pb-6 flex flex-col gap-4 font-display uppercase text-sm tracking-wide border-t border-surface pt-5">
+      <a href="#home" class="hover:text-red">Home</a>
+      <a href="#about" class="hover:text-red">About</a>
+      <a href="#plans" class="hover:text-red">Plans</a>
+      <a href="#services" class="hover:text-red">Services</a>
+      <a href="#gallery" class="hover:text-red">Gallery</a>
+      <a href="#contact" class="hover:text-red">Contact</a>
+      <a href="#plans" class="bg-red text-bone font-display font-semibold uppercase text-sm px-7 py-3 text-center mt-2">Join Now</a>
+    </div>
+  </nav>
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    const iconOpen = document.getElementById('icon-open');
+    const iconClose = document.getElementById('icon-close');
+    menuBtn.addEventListener('click', () => {
+      const isHidden = menu.classList.contains('hidden');
+      menu.classList.toggle('hidden');
+      iconOpen.classList.toggle('hidden');
+      iconClose.classList.toggle('hidden');
+      menuBtn.setAttribute('aria-expanded', isHidden ? 'true' : 'false');
+    });
+  </script>
+</header>
+
+<section id="home" class="relative min-h-[92vh] flex items-end">
+  <div class="absolute inset-0">
+    <img src="images/equipment7jpg.jpg" class="w-full h-full object-cover">
+    <div class="absolute inset-0 bg-gradient-to-t from-ink via-ink/70 to-ink/20"></div>
+  </div>
+  <div class="relative max-w-7xl mx-auto px-5 lg:px-8 pb-16 lg:pb-24 pt-40 w-full">
+    <p class="font-display uppercase tracking-[0.2em] text-red text-sm mb-4">Liliw, Laguna</p>
+    <h1 class="font-display font-semibold text-5xl sm:text-6xl lg:text-7xl leading-[0.95] max-w-3xl">
+      Train where the<br><span class="text-turf">whole barangay</span><br>gets stronger.
+    </h1>
+    <p class="mt-6 max-w-xl text-lg text-bone/80">GT Fitness is a no-frills gym in San Isidro Ilaya — real equipment, real training, no gimmicks. Two years of helping our neighbors build strength and confidence, one session at a time.</p>
+    <div class="mt-9 flex flex-wrap gap-4">
+      <a href="#plans" class="bg-red text-bone hover:bg-red/85 font-display font-semibold uppercase text-sm px-7 py-3">View Memberships</a>
+      <a href="#about" class="border-2 border-bone text-bone hover:bg-bone hover:text-ink font-display font-semibold uppercase text-sm px-7 py-3">About the Gym</a>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="max-w-7xl mx-auto px-5 lg:px-8 py-24 grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
+  <div>
+    <p class="font-display uppercase tracking-[0.2em] text-red text-sm mb-4">About Us</p>
+    <h2 class="font-display font-semibold text-4xl sm:text-5xl leading-tight mb-6">Two years strong,<br>built by the community.</h2>
+    <p class="text-bone/70 leading-relaxed mb-6">GT Fitness opened its doors in San Isidro Ilaya, Barangay Maslun, Liliw, and has spent the last two years growing into a home base for lifters, beginners, and everyone in between. We're not a chain — we're the gym down the road, run for the people who train here.</p>
+    <p class="text-bone/70 leading-relaxed mb-8">Free weights, machines, cardio equipment, and a training floor big enough to actually move — all under one roof, with a team that knows your name after your first week.</p>
+    <div class="flex gap-10">
+      <div><p class="font-display font-semibold text-4xl text-turf">2+</p><p class="text-bone/50 text-sm uppercase tracking-wide mt-1">Years Open</p></div>
+      <div><p class="font-display font-semibold text-4xl text-turf">7+</p><p class="text-bone/50 text-sm uppercase tracking-wide mt-1">Equipment Zones</p></div>
+      <div><p class="font-display font-semibold text-4xl text-turf">3</p><p class="text-bone/50 text-sm uppercase tracking-wide mt-1">Membership Options</p></div>
+    </div>
+  </div>
+  <div class="grid grid-cols-2 gap-4">
+    <img src="images/equipment1.jpg" class="w-full h-64 object-cover -rotate-1">
+    <img src="images/equipment6.jpg" class="w-full h-64 object-cover mt-8 rotate-1">
+  </div>
+</section>
+
+<section id="services" class="bg-surface/30 border-y-2 border-surface py-24">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <p class="font-display uppercase tracking-[0.2em] text-red text-sm mb-4">What We Offer</p>
+    <h2 class="font-display font-semibold text-4xl sm:text-5xl mb-14 max-w-2xl">Everything you need to train, nothing you don't.</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-12">
+
+      <div class="border-l-2 border-surface pl-6 py-2 hover:border-red transition-colors">
+        <div class="text-turf mb-4"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M6 7v10M18 7v10M2 10h4M2 14h4M18 10h4M18 14h4M6 12h12"/></svg></div>
+        <h3 class="font-display font-semibold text-lg uppercase tracking-wide mb-2">Strength Training</h3>
+        <p class="text-bone/70 text-sm leading-relaxed">Dumbbells from 10 to 65 lbs, plate-loaded stations, and free weight zones for every level.</p>
+      </div>
+
+      <div class="border-l-2 border-surface pl-6 py-2 hover:border-red transition-colors">
+        <div class="text-turf mb-4"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3 12h4l2-7 4 14 2-7h6"/></svg></div>
+        <h3 class="font-display font-semibold text-lg uppercase tracking-wide mb-2">Cardio</h3>
+        <p class="text-bone/70 text-sm leading-relaxed">Spin bikes and cardio machines to build endurance and burn through your goals.</p>
+      </div>
+
+      <div class="border-l-2 border-surface pl-6 py-2 hover:border-red transition-colors">
+        <div class="text-turf mb-4"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 12a4 4 0 100-8 4 4 0 000 8zM4 21v-1a6 6 0 016-6h4a6 6 0 016 6v1"/></svg></div>
+        <h3 class="font-display font-semibold text-lg uppercase tracking-wide mb-2">Personal Training</h3>
+        <p class="text-bone/70 text-sm leading-relaxed">One-on-one coaching to fix your form, build a plan, and keep you accountable.</p>
+      </div>
+
+      <div class="border-l-2 border-surface pl-6 py-2 hover:border-red transition-colors">
+        <div class="text-turf mb-4"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg></div>
+        <h3 class="font-display font-semibold text-lg uppercase tracking-wide mb-2">Fitness Programs</h3>
+        <p class="text-bone/70 text-sm leading-relaxed">Structured routines for weight loss, muscle gain, or general conditioning.</p>
+      </div>
+
+      <div class="border-l-2 border-surface pl-6 py-2 hover:border-red transition-colors">
+        <div class="text-turf mb-4"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h7"/></svg></div>
+        <h3 class="font-display font-semibold text-lg uppercase tracking-wide mb-2">Machine Circuits</h3>
+        <p class="text-bone/70 text-sm leading-relaxed">Selectorized and plate-loaded machines covering every major muscle group.</p>
+      </div>
+
+      <div class="border-l-2 border-surface pl-6 py-2 hover:border-red transition-colors">
+        <div class="text-turf mb-4"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+        <h3 class="font-display font-semibold text-lg uppercase tracking-wide mb-2">Flexible Access</h3>
+        <p class="text-bone/70 text-sm leading-relaxed">Daily, half-month, and monthly passes so you can train on your own schedule.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="plans" class="max-w-7xl mx-auto px-5 lg:px-8 py-24">
+  <p class="font-display uppercase tracking-[0.2em] text-red text-sm mb-4">Membership</p>
+  <h2 class="font-display font-semibold text-4xl sm:text-5xl mb-14 max-w-2xl">Pick a plan and start today.</h2>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+    <div class="flex flex-col p-8 border-2 border-surface bg-surface/40">
+      <h3 class="font-display uppercase tracking-wide text-lg text-bone/80">Daily Pass</h3>
+      <div class="mt-4 mb-6 flex items-baseline gap-1"><span class="font-display font-semibold text-5xl">₱60</span><span class="text-bone/60 text-sm">/ visit</span></div>
+      <ul class="space-y-3 mb-8 flex-1">
+        <li class="flex gap-3 text-sm text-bone/75"><span class="text-turf">✓</span> Full gym access for the day</li>
+        <li class="flex gap-3 text-sm text-bone/75"><span class="text-turf">✓</span> All equipment &amp; free weights</li>
+        <li class="flex gap-3 text-sm text-bone/75"><span class="text-turf">✓</span> No commitment</li>
+      </ul>
+      <a href="#" class="border-2 border-bone text-bone hover:bg-bone hover:text-ink font-display font-semibold uppercase text-sm px-7 py-3 text-center">Choose Daily Pass</a>
+    </div>
+
+    <div class="flex flex-col p-8 border-2 border-red bg-surface relative">
+      <span class="absolute -top-3 left-8 bg-red text-bone text-xs font-display uppercase tracking-wide px-3 py-1">Most Chosen</span>
+      <h3 class="font-display uppercase tracking-wide text-lg text-bone/80">15-Day Pass</h3>
+      <div class="mt-4 mb-6 flex items-baseline gap-1"><span class="font-display font-semibold text-5xl">₱350</span><span class="text-bone/60 text-sm">/ 15 days</span></div>
+      <ul class="space-y-3 mb-8 flex-1">
+        <li class="flex gap-3 text-sm text-bone/75"><span class="text-turf">✓</span> Everything in Daily Pass</li>
+        <li class="flex gap-3 text-sm text-bone/75"><span class="text-turf">✓</span> Half-month unlimited visits</li>
+        <li class="flex gap-3 text-sm text-bone/75"><span class="text-turf">✓</span> Best for short-term goals</li>
+      </ul>
+      <a href="#" class="bg-red text-bone hover:bg-red/85 font-display font-semibold uppercase text-sm px-7 py-3 text-center">Choose 15-Day Pass</a>
+    </div>
+
+    <div class="flex flex-col p-8 border-2 border-surface bg-surface/40">
+      <h3 class="font-display uppercase tracking-wide text-lg text-bone/80">Monthly</h3>
+      <div class="mt-4 mb-6 flex items-baseline gap-1"><span class="font-display font-semibold text-5xl">₱700</span><span class="text-bone/60 text-sm">/ month</span></div>
+      <ul class="space-y-3 mb-8 flex-1">
+        <li class="flex gap-3 text-sm text-bone/75"><span class="text-turf">✓</span> Unlimited visits, 30 days</li>
+        <li class="flex gap-3 text-sm text-bone/75"><span class="text-turf">✓</span> Best value per session</li>
+        <li class="flex gap-3 text-sm text-bone/75"><span class="text-turf">✓</span> Priority for programs</li>
+      </ul>
+      <a href="#" class="border-2 border-bone text-bone hover:bg-bone hover:text-ink font-display font-semibold uppercase text-sm px-7 py-3 text-center">Choose Monthly</a>
+    </div>
+
+  </div>
+</section>
+
+<section id="gallery" class="bg-surface/30 border-y-2 border-surface py-24">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <p class="font-display uppercase tracking-[0.2em] text-red text-sm mb-4">Facilities</p>
+    <h2 class="font-display font-semibold text-4xl sm:text-5xl mb-14 max-w-2xl">Take a look around the gym.</h2>
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+      <img src="images/equipment1.jpg" class="w-full h-56 object-cover">
+      <img src="images/equipment2.jpg" class="w-full h-56 object-cover">
+      <img src="images/equipment3.jpg" class="w-full h-56 object-cover">
+      <img src="images/equipment5.jpg" class="w-full h-56 object-cover">
+      <img src="images/equipment6.jpg" class="w-full h-56 object-cover">
+      <img src="images/equipment7jpg.jpg" class="w-full h-56 object-cover">
+      <img src="images/gym_logo.jpg" class="w-full h-56 object-cover">
+      <div class="w-full h-56 bg-red flex flex-col items-center justify-center text-center p-4">
+        <p class="font-display font-semibold text-2xl">Come see it<br>in person</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="max-w-7xl mx-auto px-5 lg:px-8 py-24">
+  <p class="font-display uppercase tracking-[0.2em] text-red text-sm mb-4">Testimonials</p>
+  <h2 class="font-display font-semibold text-4xl sm:text-5xl mb-14 max-w-2xl">What our members say.</h2>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <div class="bg-surface p-8 border-t-2 border-red">
+      <p class="text-bone/85 leading-relaxed mb-6">&ldquo;Sarado man ang barangay pero buhay ang gym na 'to. Sulit yung monthly kahit araw-araw ako.&rdquo;</p>
+      <div class="flex items-center gap-3"><div class="h-11 w-11 rounded-full bg-turf/20 border border-turf flex items-center justify-center font-display font-semibold text-turf">M</div><div><p class="font-display font-semibold uppercase tracking-wide text-sm">Marco R.</p><p class="text-bone/50 text-xs">Member since 2023</p></div></div>
+    </div>
+    <div class="bg-surface p-8 border-t-2 border-red">
+      <p class="text-bone/85 leading-relaxed mb-6">&ldquo;Yung mga kagamitan kumpleto at malinis. Yung staff friendly din, tinuturuan ka kung paano gamitin.&rdquo;</p>
+      <div class="flex items-center gap-3"><div class="h-11 w-11 rounded-full bg-turf/20 border border-turf flex items-center justify-center font-display font-semibold text-turf">A</div><div><p class="font-display font-semibold uppercase tracking-wide text-sm">Angeline T.</p><p class="text-bone/50 text-xs">Member since 2024</p></div></div>
+    </div>
+    <div class="bg-surface p-8 border-t-2 border-red">
+      <p class="text-bone/85 leading-relaxed mb-6">&ldquo;Nag-start ako sa daily pass, tapos nag-monthly na ako dahil ang saya ng environment dito.&rdquo;</p>
+      <div class="flex items-center gap-3"><div class="h-11 w-11 rounded-full bg-turf/20 border border-turf flex items-center justify-center font-display font-semibold text-turf">J</div><div><p class="font-display font-semibold uppercase tracking-wide text-sm">Julius P.</p><p class="text-bone/50 text-xs">Member since 2023</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-red">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 py-20 flex flex-col lg:flex-row items-center justify-between gap-8">
+    <h2 class="font-display font-semibold text-3xl sm:text-4xl text-center lg:text-left max-w-xl text-bone">Ready to be one of us? Your first session starts whenever you walk in.</h2>
+    <div class="flex flex-wrap gap-4 justify-center">
+      <a href="#plans" class="border-2 border-bone text-bone hover:bg-bone hover:text-red font-display font-semibold uppercase text-sm px-7 py-3">View Memberships</a>
+      <a href="#" class="border-2 border-bone text-bone hover:bg-bone hover:text-red font-display font-semibold uppercase text-sm px-7 py-3">Message Us on Facebook</a>
+    </div>
+  </div>
+</section>
+
+<footer id="contact" class="border-t-2 border-surface">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 py-16 grid grid-cols-1 md:grid-cols-4 gap-10">
+    <div class="md:col-span-2">
+      <div class="flex items-center gap-3 mb-4"><img src="images/gym_logo.jpg" class="h-10 w-10 object-cover rounded-sm"><span class="font-display font-semibold text-xl tracking-wide">GT FITNESS</span></div>
+      <p class="text-bone/60 text-sm max-w-sm leading-relaxed">Strength &middot; Confidence &middot; Greatness. A community gym in Liliw built for people who show up and put in the work.</p>
+      <div class="mt-6 flex gap-4">
+        <a href="#" class="h-10 w-10 flex items-center justify-center border border-surface hover:border-red hover:text-red transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M22 12.06C22 6.51 17.52 2 12 2S2 6.51 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.51 1.49-3.9 3.77-3.9 1.09 0 2.23.2 2.23.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.87h2.78l-.44 2.91h-2.34V22c4.78-.76 8.44-4.92 8.44-9.94z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div>
+      <h4 class="font-display uppercase tracking-wide text-sm text-bone/80 mb-4">Quick Links</h4>
+      <ul class="space-y-2 text-sm text-bone/60"><li><a href="#about" class="hover:text-red">About Us</a></li><li><a href="#plans" class="hover:text-red">Membership Plans</a></li><li><a href="#services" class="hover:text-red">Services</a></li><li><a href="#gallery" class="hover:text-red">Gallery</a></li></ul>
+    </div>
+    <div>
+      <h4 class="font-display uppercase tracking-wide text-sm text-bone/80 mb-4">Visit Us</h4>
+      <ul class="space-y-2 text-sm text-bone/60"><li>San Isidro Ilaya, Brgy. Maslun</li><li>Liliw, Laguna, Philippines</li><li class="pt-2"><a href="#" class="hover:text-red">Facebook Page</a></li><li><a href="#" class="hover:text-red">Messenger</a></li></ul>
+    </div>
+  </div>
+  <div class="border-t border-surface"><div class="max-w-7xl mx-auto px-5 lg:px-8 py-6 flex flex-col sm:flex-row justify-between gap-2 text-xs text-bone/40"><p>&copy; 2024 GT Fitness. All rights reserved.</p><p>Be one of us.</p></div></div>
+</footer>
+
+</body>
+</html>

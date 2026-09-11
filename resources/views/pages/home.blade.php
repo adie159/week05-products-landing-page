@@ -150,7 +150,7 @@
             </x-testimonial-card>
 
             <x-testimonial-card name="Julius P." role="Member since 2023" initial="J">
-                Nagstart ako sa daily pass, tapos nag-monthly na ako dahil ang saya ng environment dito.
+                Nag-start ako sa daily pass, tapos nag-monthly na ako dahil ang saya ng environment dito.
             </x-testimonial-card>
         </div>
     </section>
