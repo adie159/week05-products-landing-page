@@ -139,7 +139,7 @@ and GitHub repository.
  9. Before-and-After
 
 See `/documentation` folder for the early wireframe/prototype versus the final polished,
-responsive version.
+responsive versions.
 
  Notes on Content
 
