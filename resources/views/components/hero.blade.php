@@ -21,7 +21,7 @@
         </p>
 
         <div class="mt-9 flex flex-wrap gap-4">
-            <x-button href="#plans" variant="primary">View Memberships</x-button>
+            <x-button href="#plans" variant="primary">View Membership</x-button>
             <x-button href="#about" variant="outline">About the Gym</x-button>
         </div>
     </div>
